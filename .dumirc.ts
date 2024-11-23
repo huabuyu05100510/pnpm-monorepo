@@ -6,8 +6,8 @@ let base: string | undefined;
 let publicPath: string | undefined;
 
 if (process.env.PREVIEW !== "1") {
-  base = "/perfect-design/";
-  publicPath = "/perfect-design/";
+  base = "/pnpm-monorepo/";
+  publicPath = "/pnpm-monorepo/";
 }
 
 export default defineConfig({
