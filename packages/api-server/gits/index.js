@@ -5,37 +5,37 @@ const os = require("os");
 const fsExtra = require("fs-extra");
 const ejs = require("ejs");
 
-async function createDir(targetDir) {
-  if (fsExtra.existsSync(targetDir)) {
-    // 是否为强制创建？
-      await fsExtra.remove(targetDir);
+async function createDir({targetDir,pageName,templateDir}) {
+  if (!fsExtra.existsSync(targetDir)) {
+     await fsExtra.mkdirsSync(targetDir);
+    const mdHeader = await ejs.renderFile(
+      path.resolve(templateDir, "mdHeader.ejs"),
+      {pageName}
+    );
+    fsExtra.writeFileSync(path.join(targetDir, "/index.md"), mdHeader);   
   }
-  fsExtra.mkdirsSync(targetDir);
+   
 }
 
-async function copyFile(targetDir, templateDir, rawHtml, componentName) {
+async function copyFile({targetDir, templateDir, rawHtml, componentName,pageName}) {
  console.log(rawHtml,'rawHtmlooooo')
   const rawContent = await ejs.renderFile(
-    path.resolve(templateDir, "demo.ejs"),
+    path.resolve(templateDir, "component.ejs"),
     { rawHtml },
     { async: true }
   );
-  fsExtra.writeFileSync(path.join(targetDir, "/demo.tsx"), rawContent);
+  fsExtra.writeFileSync(path.join(targetDir, `/${componentName}.tsx`), rawContent);
 
   const mdContent = await ejs.renderFile(
-    path.resolve(templateDir, "index.ejs"),
+    path.resolve(templateDir, "mdItem.ejs"),
     { componentName },
     { async: true }
   );
-  fsExtra.writeFileSync(path.join(targetDir, "/index.md"), mdContent);
+  fsExtra.appendFileSync(path.join(targetDir, "/index.md"), mdContent);
 
-  const indexContent = await ejs.renderFile(
-    path.resolve(templateDir, "index.tsx"),
-  );
-  fsExtra.writeFileSync(path.join(targetDir, "/index.tsx"), indexContent);
 }
 
-module.exports = async function modifyGit({ componentName, rawHtml }) {
+module.exports = async function modifyGit({ pageName,componentName, rawHtml }) {
   // 创建一个临时目录来克隆仓库
   const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), "repo-"));
   console.log(tempDir, "tempDir");
@@ -50,12 +50,12 @@ module.exports = async function modifyGit({ componentName, rawHtml }) {
       }
 
       // 进入仓库目录
-      const templateDir = `${tempDir}/packages/component-with-fixed/templates`;
+      const templateDir = `${tempDir}/packages/component-with-fixed/templates2`;
       const srcDir = `${tempDir}/packages/component-with-fixed/src`;
-      const targetDir = `${srcDir}/${componentName}`;
+      const targetDir = `${srcDir}/${pageName}`;
       process.chdir(srcDir);
       createDir(targetDir);
-      copyFile(targetDir, templateDir, rawHtml, componentName)
+      copyFile({targetDir, templateDir, rawHtml, componentName,pageName})
     //   fs.writeFileSync(path.join(targetAir, "/index.tsx"), html);
       //创建文件
       // 修改文件或代码
