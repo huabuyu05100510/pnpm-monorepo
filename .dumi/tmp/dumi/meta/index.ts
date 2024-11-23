@@ -13,18 +13,22 @@ import { frontmatter as fm4, toc as t4 } from '/Users/huabuyu/Documents/pnpm-mon
 import { demoIndex as dmi4 } from '/Users/huabuyu/Documents/pnpm-monorepo/packages/component-with-fixed/src/Test2/index.md?type=demo-index';
 import { frontmatter as fm5, toc as t5 } from '/Users/huabuyu/Documents/pnpm-monorepo/packages/component-with-fixed/src/Test3/index.md?type=frontmatter';
 import { demoIndex as dmi5 } from '/Users/huabuyu/Documents/pnpm-monorepo/packages/component-with-fixed/src/Test3/index.md?type=demo-index';
-import { frontmatter as fm6, toc as t6 } from '/Users/huabuyu/Documents/pnpm-monorepo/packages/loading-with-cache/src/loading.md?type=frontmatter';
-import { demoIndex as dmi6 } from '/Users/huabuyu/Documents/pnpm-monorepo/packages/loading-with-cache/src/loading.md?type=demo-index';
-import { frontmatter as fm7, toc as t7 } from '/Users/huabuyu/Documents/pnpm-monorepo/packages/component-with-fixed/src/Button1/index.md?type=frontmatter';
-import { demoIndex as dmi7 } from '/Users/huabuyu/Documents/pnpm-monorepo/packages/component-with-fixed/src/Button1/index.md?type=demo-index';
-import { frontmatter as fm8, toc as t8 } from '/Users/huabuyu/Documents/pnpm-monorepo/packages/component-with-fixed/src/Button2/index.md?type=frontmatter';
-import { demoIndex as dmi8 } from '/Users/huabuyu/Documents/pnpm-monorepo/packages/component-with-fixed/src/Button2/index.md?type=demo-index';
-import { frontmatter as fm9, toc as t9 } from '/Users/huabuyu/Documents/pnpm-monorepo/packages/component-with-fixed/src/Test2/index.md?type=frontmatter';
-import { demoIndex as dmi9 } from '/Users/huabuyu/Documents/pnpm-monorepo/packages/component-with-fixed/src/Test2/index.md?type=demo-index';
-import { frontmatter as fm10, toc as t10 } from '/Users/huabuyu/Documents/pnpm-monorepo/packages/component-with-fixed/src/Test3/index.md?type=frontmatter';
-import { demoIndex as dmi10 } from '/Users/huabuyu/Documents/pnpm-monorepo/packages/component-with-fixed/src/Test3/index.md?type=demo-index';
-import { frontmatter as fm11, toc as t11 } from '/Users/huabuyu/Documents/pnpm-monorepo/packages/loading-with-cache/src/loading.md?type=frontmatter';
-import { demoIndex as dmi11 } from '/Users/huabuyu/Documents/pnpm-monorepo/packages/loading-with-cache/src/loading.md?type=demo-index';
+import { frontmatter as fm6, toc as t6 } from '/Users/huabuyu/Documents/pnpm-monorepo/packages/component-with-fixed/src/Test6/index.md?type=frontmatter';
+import { demoIndex as dmi6 } from '/Users/huabuyu/Documents/pnpm-monorepo/packages/component-with-fixed/src/Test6/index.md?type=demo-index';
+import { frontmatter as fm7, toc as t7 } from '/Users/huabuyu/Documents/pnpm-monorepo/packages/loading-with-cache/src/loading.md?type=frontmatter';
+import { demoIndex as dmi7 } from '/Users/huabuyu/Documents/pnpm-monorepo/packages/loading-with-cache/src/loading.md?type=demo-index';
+import { frontmatter as fm8, toc as t8 } from '/Users/huabuyu/Documents/pnpm-monorepo/packages/component-with-fixed/src/Button1/index.md?type=frontmatter';
+import { demoIndex as dmi8 } from '/Users/huabuyu/Documents/pnpm-monorepo/packages/component-with-fixed/src/Button1/index.md?type=demo-index';
+import { frontmatter as fm9, toc as t9 } from '/Users/huabuyu/Documents/pnpm-monorepo/packages/component-with-fixed/src/Button2/index.md?type=frontmatter';
+import { demoIndex as dmi9 } from '/Users/huabuyu/Documents/pnpm-monorepo/packages/component-with-fixed/src/Button2/index.md?type=demo-index';
+import { frontmatter as fm10, toc as t10 } from '/Users/huabuyu/Documents/pnpm-monorepo/packages/component-with-fixed/src/Test2/index.md?type=frontmatter';
+import { demoIndex as dmi10 } from '/Users/huabuyu/Documents/pnpm-monorepo/packages/component-with-fixed/src/Test2/index.md?type=demo-index';
+import { frontmatter as fm11, toc as t11 } from '/Users/huabuyu/Documents/pnpm-monorepo/packages/component-with-fixed/src/Test3/index.md?type=frontmatter';
+import { demoIndex as dmi11 } from '/Users/huabuyu/Documents/pnpm-monorepo/packages/component-with-fixed/src/Test3/index.md?type=demo-index';
+import { frontmatter as fm12, toc as t12 } from '/Users/huabuyu/Documents/pnpm-monorepo/packages/component-with-fixed/src/Test6/index.md?type=frontmatter';
+import { demoIndex as dmi12 } from '/Users/huabuyu/Documents/pnpm-monorepo/packages/component-with-fixed/src/Test6/index.md?type=demo-index';
+import { frontmatter as fm13, toc as t13 } from '/Users/huabuyu/Documents/pnpm-monorepo/packages/loading-with-cache/src/loading.md?type=frontmatter';
+import { demoIndex as dmi13 } from '/Users/huabuyu/Documents/pnpm-monorepo/packages/loading-with-cache/src/loading.md?type=demo-index';
 
 export const filesMeta = {
   'docs/guide': {
@@ -63,40 +67,52 @@ export const filesMeta = {
     demoIndex: dmi5,
     textGetter: () => import(/* webpackChunkName: "meta__packages" */'/Users/huabuyu/Documents/pnpm-monorepo/packages/component-with-fixed/src/Test3/index.md?type=text'),
   },
-  '/packages/loading-with-cache/src/loading': {
+  '/packages/component-with-fixed/src/Test6/index': {
     frontmatter: fm6,
     toc: t6,
     demoIndex: dmi6,
-    textGetter: () => import(/* webpackChunkName: "meta__packages" */'/Users/huabuyu/Documents/pnpm-monorepo/packages/loading-with-cache/src/loading.md?type=text'),
+    textGetter: () => import(/* webpackChunkName: "meta__packages" */'/Users/huabuyu/Documents/pnpm-monorepo/packages/component-with-fixed/src/Test6/index.md?type=text'),
   },
-  'components/Button1/index': {
+  '/packages/loading-with-cache/src/loading': {
     frontmatter: fm7,
     toc: t7,
     demoIndex: dmi7,
-    textGetter: () => import(/* webpackChunkName: "meta__packages" */'/Users/huabuyu/Documents/pnpm-monorepo/packages/component-with-fixed/src/Button1/index.md?type=text'),
+    textGetter: () => import(/* webpackChunkName: "meta__packages" */'/Users/huabuyu/Documents/pnpm-monorepo/packages/loading-with-cache/src/loading.md?type=text'),
   },
-  'components/Button2/index': {
+  'components/Button1/index': {
     frontmatter: fm8,
     toc: t8,
     demoIndex: dmi8,
-    textGetter: () => import(/* webpackChunkName: "meta__packages" */'/Users/huabuyu/Documents/pnpm-monorepo/packages/component-with-fixed/src/Button2/index.md?type=text'),
+    textGetter: () => import(/* webpackChunkName: "meta__packages" */'/Users/huabuyu/Documents/pnpm-monorepo/packages/component-with-fixed/src/Button1/index.md?type=text'),
   },
-  'components/Test2/index': {
+  'components/Button2/index': {
     frontmatter: fm9,
     toc: t9,
     demoIndex: dmi9,
-    textGetter: () => import(/* webpackChunkName: "meta__packages" */'/Users/huabuyu/Documents/pnpm-monorepo/packages/component-with-fixed/src/Test2/index.md?type=text'),
+    textGetter: () => import(/* webpackChunkName: "meta__packages" */'/Users/huabuyu/Documents/pnpm-monorepo/packages/component-with-fixed/src/Button2/index.md?type=text'),
   },
-  'components/Test3/index': {
+  'components/Test2/index': {
     frontmatter: fm10,
     toc: t10,
     demoIndex: dmi10,
-    textGetter: () => import(/* webpackChunkName: "meta__packages" */'/Users/huabuyu/Documents/pnpm-monorepo/packages/component-with-fixed/src/Test3/index.md?type=text'),
+    textGetter: () => import(/* webpackChunkName: "meta__packages" */'/Users/huabuyu/Documents/pnpm-monorepo/packages/component-with-fixed/src/Test2/index.md?type=text'),
   },
-  'component1s/loading': {
+  'components/Test3/index': {
     frontmatter: fm11,
     toc: t11,
     demoIndex: dmi11,
+    textGetter: () => import(/* webpackChunkName: "meta__packages" */'/Users/huabuyu/Documents/pnpm-monorepo/packages/component-with-fixed/src/Test3/index.md?type=text'),
+  },
+  'components/Test6/index': {
+    frontmatter: fm12,
+    toc: t12,
+    demoIndex: dmi12,
+    textGetter: () => import(/* webpackChunkName: "meta__packages" */'/Users/huabuyu/Documents/pnpm-monorepo/packages/component-with-fixed/src/Test6/index.md?type=text'),
+  },
+  'component1s/loading': {
+    frontmatter: fm13,
+    toc: t13,
+    demoIndex: dmi13,
     textGetter: () => import(/* webpackChunkName: "meta__packages" */'/Users/huabuyu/Documents/pnpm-monorepo/packages/loading-with-cache/src/loading.md?type=text'),
   },
 }
