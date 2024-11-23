@@ -6,14 +6,14 @@ let base: string | undefined;
 let publicPath: string | undefined;
 
 if (process.env.PREVIEW !== "1") {
-  base = "/pnpm-monorepo/";
-  publicPath = "/pnpm-monorepo/";
+  base = "/smarty-skeleton/";
+  publicPath = "/smarty-skeleton/";
 }
 
 export default defineConfig({
   base,
   publicPath,
-  title: "Perfect Design", // 站点名称
+  title: "smarty skeleton", // 站点名称
   outputPath: "docs-dist", // 输出文件夹
   resolve: {
     docDirs: [

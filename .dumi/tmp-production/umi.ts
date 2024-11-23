@@ -12,7 +12,7 @@ import Loading from '@@/dumi/theme/loading';
 import { ApplyPluginsType } from 'umi';
 
 
-const publicPath = "/pnpm-monorepo/";
+const publicPath = "/smarty-skeleton/";
 const runtimePublicPath = false;
 
 async function render() {
@@ -35,7 +35,7 @@ async function render() {
     initialValue: {},
   });
 
-  const basename = contextOpts.basename || '/pnpm-monorepo/';
+  const basename = contextOpts.basename || '/smarty-skeleton/';
   const historyType = contextOpts.historyType || 'browser';
 
   const history = createHistory({
