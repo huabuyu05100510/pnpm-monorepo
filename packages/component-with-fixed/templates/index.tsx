@@ -3,7 +3,10 @@
  */
 
 import React from 'react';
+import Demo from './demo'
 
 export default () => (
-  <h1 style={{ position: 'fixed', top: 0, left: 0 }}>我不会飞出去</h1>
+  
+    <Demo/>
+   
 );
