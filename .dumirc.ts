@@ -6,8 +6,8 @@ let base: string | undefined;
 let publicPath: string | undefined;
 
 if (process.env.PREVIEW !== "1") {
-  base = "/smarty-skeleton/";
-  publicPath = "/smarty-skeleton/";
+  base = "/pnpm-monorepo/";
+  publicPath = "/pnpm-monorepo/";
 }
 
 export default defineConfig({
