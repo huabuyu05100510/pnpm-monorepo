@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "dumi dev",
-    "build:doc": "dumi build"
+    "build:docs": "rimraf docs-dist && dumi build"
   },
   "author": "",
   "license": "ISC",

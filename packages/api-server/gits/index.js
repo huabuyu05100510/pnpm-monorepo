@@ -6,7 +6,9 @@ const fsExtra = require("fs-extra");
 const ejs = require("ejs");
 
 async function createDir({targetDir,pageName,templateDir}) {
+  
   if (!fsExtra.existsSync(targetDir)) {
+    console.log(1)
      await fsExtra.mkdirsSync(targetDir);
     const mdHeader = await ejs.renderFile(
       path.resolve(templateDir, "mdHeader.ejs"),
@@ -18,27 +20,27 @@ async function createDir({targetDir,pageName,templateDir}) {
 }
 
 async function copyFile({targetDir, templateDir, rawHtml, componentName,pageName}) {
- console.log(rawHtml,'rawHtmlooooo')
+ 
   const rawContent = await ejs.renderFile(
     path.resolve(templateDir, "component.ejs"),
     { rawHtml },
     { async: true }
   );
   fsExtra.writeFileSync(path.join(targetDir, `/${componentName}.tsx`), rawContent);
-
   const mdContent = await ejs.renderFile(
     path.resolve(templateDir, "mdItem.ejs"),
     { componentName },
     { async: true }
   );
+  console.log(mdContent,'mdmmm')
   fsExtra.appendFileSync(path.join(targetDir, "/index.md"), mdContent);
 
 }
 
 module.exports = async function modifyGit({ pageName,componentName, rawHtml }) {
   // 创建一个临时目录来克隆仓库
-  const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), "repo-"));
-  console.log(tempDir, "tempDir");
+  const tempDir = fs.mkdtempSync(path.join(os.tmpdir(), "repo1-"));
+  
   // 克隆仓库到临时目录
   simpleGit().clone(
     "git@github.com:huabuyu05100510/pnpm-monorepo.git",
@@ -48,13 +50,13 @@ module.exports = async function modifyGit({ pageName,componentName, rawHtml }) {
         console.error("克隆仓库失败", err);
         return;
       }
-
+ 
       // 进入仓库目录
       const templateDir = `${tempDir}/packages/component-with-fixed/templates2`;
       const srcDir = `${tempDir}/packages/component-with-fixed/src`;
       const targetDir = `${srcDir}/${pageName}`;
       process.chdir(srcDir);
-      createDir(targetDir);
+      createDir({targetDir,pageName,templateDir});
       copyFile({targetDir, templateDir, rawHtml, componentName,pageName})
     //   fs.writeFileSync(path.join(targetAir, "/index.tsx"), html);
       //创建文件
@@ -69,7 +71,7 @@ module.exports = async function modifyGit({ pageName,componentName, rawHtml }) {
         }
 
         // 提交更改
-        simpleGit().commit(`skeleton ${componentName}推送成功`, (commitErr) => {
+        simpleGit().commit(`skeleton ${pageName}/${componentName}推送成功`, (commitErr) => {
           if (commitErr) {
             console.error("提交更改失败", commitErr);
             return;
@@ -82,7 +84,7 @@ module.exports = async function modifyGit({ pageName,componentName, rawHtml }) {
               return;
             }
 
-            console.log(`skeleton ${componentName}推送远程仓库`);
+            console.log(`skeleton ${pageName}/${componentName}推送远程仓库`);
           });
         });
       });
