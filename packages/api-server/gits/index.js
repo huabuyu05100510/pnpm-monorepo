@@ -14,6 +14,7 @@ async function createDir(targetDir) {
 }
 
 async function copyFile(targetDir, templateDir, rawHtml, componentName) {
+ console.log(rawHtml,'rawHtmlooooo')
   const rawContent = await ejs.renderFile(
     path.resolve(templateDir, "demo.ejs"),
     { rawHtml },
