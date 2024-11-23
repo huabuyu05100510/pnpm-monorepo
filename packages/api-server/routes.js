@@ -1,5 +1,4 @@
 const express = require("express");
-const create=require('./template/create');
 const modifyGit=require('./gits/index')
 
 const router = express.Router();
@@ -10,7 +9,7 @@ router.get('/skeleton/get', (req, res) => {
 
 router.post('/skeleton/save', (req, res) => {
     // create('test')
-    modifyGit()
+    modifyGit({componentName:req.body.name, rawHtml:req.body.rawHtml})
   res.send('POST router request123')
 })
 
