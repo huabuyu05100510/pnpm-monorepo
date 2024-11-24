@@ -1,31 +1,20 @@
-name: Build and Deploy
+name: github pages
+
 on:
   push:
     branches:
-      - main
+      - master # default branch
+
 jobs:
-  build-and-deploy:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: write
+  deploy:
+    runs-on: ubuntu-18.04
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2.3.1
-
-      - name: Lock npm version
-        uses: actions/setup-node@v3
-
-      - name: Install and Build
-        run: |
-          npm i -g pnpm
-          pnpm run init
-          pnpm run build:docs
-        env:
-          NODE_OPTIONS: '--max_old_space_size=4096'
-
+      - uses: actions/checkout@v2
+      - run: npm i pnpm -g
+      - run: pnpm install
+      - run: pnpm build:docs
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@4.1.3
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          BRANCH: gh-pages
-          FOLDER: ./docs-dist
-          ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+          github_token: ${{ secrets.ACCESS_TOKEN }}
+          publish_dir: ./docs-dist
