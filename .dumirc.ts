@@ -47,7 +47,7 @@ export default defineConfig({
         link: "/loading",
       },
       {
-        title: "组件",
+        title: "组件123",
         link: "/components/page1",
       },
     ],
