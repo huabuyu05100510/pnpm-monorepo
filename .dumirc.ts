@@ -39,7 +39,7 @@ export default defineConfig({
       "Copyright © 2022-2022 Perfect Design. All Rights Reserved. Perfect Design 版权所有. 苏ICP备2022018069号",
     nav: [
       {
-        title: "指南",
+        title: "指南123",
         link: "/guide",
       },
       {
