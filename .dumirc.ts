@@ -14,7 +14,7 @@ export default defineConfig({
   base,
   publicPath,
   title: "smarty skeleton", // 站点名称
-  outputPath: "docs", // 输出文件夹
+  outputPath: "sites", // 输出文件夹
   resolve: {
     docDirs: [
       "dumi-docs",
@@ -43,7 +43,7 @@ export default defineConfig({
         link: "/guide",
       },
       {
-        title: "loading",
+        title: "loading234",
         link: "/loading",
       },
       {
