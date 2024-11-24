@@ -1,5 +1,5 @@
 import { defineConfig } from "dumi";
-import style from "./docs/siteIndexStyle";
+import style from "./dumi-docs/siteIndexStyle";
 import path from "path";
 
 let base: string | undefined;
@@ -14,10 +14,10 @@ export default defineConfig({
   base,
   publicPath,
   title: "smarty skeleton", // 站点名称
-  outputPath: "docs-dist", // 输出文件夹
+  outputPath: "docs", // 输出文件夹
   resolve: {
     docDirs: [
-      "docs",
+      "dumi-docs",
       "/packages/component-with-fixed/src",
       "/packages/loading-with-cache/src",
     ],
