@@ -12,7 +12,7 @@ import Loading from '@@/dumi/theme/loading';
 import { ApplyPluginsType } from 'umi';
 
 
-const publicPath = "/perfect-design/";
+const publicPath = "/pnpm-monorepo/";
 const runtimePublicPath = false;
 
 async function render() {
@@ -35,7 +35,7 @@ async function render() {
     initialValue: {},
   });
 
-  const basename = contextOpts.basename || '/perfect-design/';
+  const basename = contextOpts.basename || '/pnpm-monorepo/';
   const historyType = contextOpts.historyType || 'browser';
 
   const history = createHistory({

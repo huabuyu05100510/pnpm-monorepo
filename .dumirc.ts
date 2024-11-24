@@ -31,7 +31,7 @@ export default defineConfig({
     perfectD: path.join(__dirname, "packages/perfect-design/src"),
   },
   themeConfig: {
-    name: "Perfect D",
+    name: "smarty skeleton",
     carrier: "dumi", // 设备状态栏左侧的文本内容
     hd: true,
     rtl: true,
