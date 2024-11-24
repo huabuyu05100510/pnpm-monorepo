@@ -17,7 +17,7 @@ const entryExports = {
 const pkg = {"name":"pnpm-monorepo","description":"","version":"1.0.0","license":"ISC","author":""};
 const historyType = "browser";
 const hostname = undefined;
-const themeConfig = {"title":"smarty skeleton","footer":"Copyright © 2022-2022 Perfect Design. All Rights Reserved. Perfect Design 版权所有. 苏ICP备2022018069号","prefersColor":{"default":"light","switch":true},"nprogress":true,"lastUpdated":true,"name":"smarty skeleton","carrier":"dumi","hd":true,"rtl":true,"nav":[{"title":"指南","link":"/guide"},{"title":"loading","link":"/loading"},{"title":"组件","link":"/components/button1"}]};
+const themeConfig = {"title":"smarty skeleton","footer":"Copyright © 2022-2022 Perfect Design. All Rights Reserved. Perfect Design 版权所有. 苏ICP备2022018069号","prefersColor":{"default":"light","switch":true},"nprogress":true,"lastUpdated":true,"name":"smarty skeleton","carrier":"dumi","hd":true,"rtl":true,"nav":[{"title":"指南","link":"/guide"},{"title":"loading","link":"/loading"},{"title":"组件","link":"/components/page1"}]};
 const _2_level_nav_available = false;
 
 export default function DumiContextWrapper() {
