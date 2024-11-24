@@ -28,7 +28,7 @@ export default defineConfig({
     codeBlockMode: "passive",
   },
   alias: {
-    perfectD: path.join(__dirname, "packages/perfect-design/src"),
+    SmartySkeleton: path.join(__dirname, "packages/component-with-fixed/src"),
   },
   themeConfig: {
     name: "smarty skeleton",
@@ -36,7 +36,7 @@ export default defineConfig({
     hd: true,
     rtl: true,
     footer:
-      "Copyright © 2022-2022 Perfect Design. All Rights Reserved. Perfect Design 版权所有. 苏ICP备2022018069号",
+      "Copyright © 2024-2024 Smarty Skeleton. All Rights Reserved. Smarty Skeleton 版权所有.",
     nav: [
       {
         title: "指南",
