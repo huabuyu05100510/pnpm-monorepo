@@ -1,4 +1,4 @@
-(function(o,e){typeof exports=="object"&&typeof module<"u"?module.exports=e(require("react")):typeof define=="function"&&define.amd?define(["react"],e):(o=typeof globalThis<"u"?globalThis:o||self,o.index=e(o.React))})(this,function(o){"use strict";const e=()=>(console.log("ske234"),o.createElement("div",{dangerouslySetInnerHTML:{__html:`<style>
+(function(o,e){typeof exports=="object"&&typeof module<"u"?module.exports=e(require("react")):typeof define=="function"&&define.amd?define(["react"],e):(o=typeof globalThis<"u"?globalThis:o||self,o.index=e(o.React))})(this,function(o){"use strict";const e=()=>(console.log("ske234 78910"),o.createElement("div",{dangerouslySetInnerHTML:{__html:`<style>
   .skeleton-common {
   position: absolute;
   background:#e9e9e9 linear-gradient(90deg, rgba(0, 0, 0, 0.06) 50%, rgba(0, 0, 0, 0.15) 50%, rgba(0, 0, 0, 0.06) 63%);

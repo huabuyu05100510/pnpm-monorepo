@@ -1,5 +1,5 @@
 import o from "react";
-const r = () => (console.log("ske234"), /* @__PURE__ */ o.createElement(
+const r = () => (console.log("ske234 78910"), /* @__PURE__ */ o.createElement(
   "div",
   {
     dangerouslySetInnerHTML: {
