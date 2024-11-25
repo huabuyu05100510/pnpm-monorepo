@@ -1,5 +1,6 @@
 import React from "react";
 const Ske = () => {
+  console.log('ske345')
   return (
     <div
       dangerouslySetInnerHTML={{
