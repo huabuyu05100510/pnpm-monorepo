@@ -1,5 +1,6 @@
 "use strict";(self.webpackChunkpnpm_monorepo=self.webpackChunkpnpm_monorepo||[]).push([[56],{6370:function(a,d,o){var t;o.r(d),o.d(d,{demos:function(){return f}});var n=o(90228),i=o.n(n),c=o(87999),h=o.n(c),r=o(75271),v=o(69740),f={"packages-component-with-fixed-src-page-1-demo-page1sub1":{component:r.memo(r.lazy(function(){return o.e(433).then(o.bind(o,9))})),asset:{type:"BLOCK",id:"packages-component-with-fixed-src-page-1-demo-page1sub1",refAtomIds:[],dependencies:{"index.jsx":{type:"FILE",value:o(42035).Z},react:{type:"NPM",value:"18.3.1"}},entry:"index.jsx"},context:{react:t||(t=o.t(r,2))},renderOpts:{compile:function(){var l=h()(i()().mark(function b(){var s,u=arguments;return i()().wrap(function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,o.e(491).then(o.bind(o,38491));case 2:return e.abrupt("return",(s=e.sent).default.apply(s,u));case 3:case"end":return e.stop()}},b)}));function p(){return l.apply(this,arguments)}return p}()}},"packages-component-with-fixed-src-page-1-demo-page1sub2":{component:r.memo(r.lazy(function(){return o.e(433).then(o.bind(o,86805))})),asset:{type:"BLOCK",id:"packages-component-with-fixed-src-page-1-demo-page1sub2",refAtomIds:[],dependencies:{"index.jsx":{type:"FILE",value:o(91896).Z},react:{type:"NPM",value:"18.3.1"}},entry:"index.jsx"},context:{react:t||(t=o.t(r,2))},renderOpts:{compile:function(){var l=h()(i()().mark(function b(){var s,u=arguments;return i()().wrap(function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,o.e(491).then(o.bind(o,38491));case 2:return e.abrupt("return",(s=e.sent).default.apply(s,u));case 3:case"end":return e.stop()}},b)}));function p(){return l.apply(this,arguments)}return p}()}},"packages-component-with-fixed-src-page-1-demo-pagesub3":{component:r.memo(r.lazy(function(){return o.e(433).then(o.bind(o,84211))})),asset:{type:"BLOCK",id:"packages-component-with-fixed-src-page-1-demo-pagesub3",refAtomIds:[],dependencies:{"index.jsx":{type:"FILE",value:o(71606).Z},react:{type:"NPM",value:"18.3.1"}},entry:"index.jsx"},context:{react:t||(t=o.t(r,2))},renderOpts:{compile:function(){var l=h()(i()().mark(function b(){var s,u=arguments;return i()().wrap(function(e){for(;;)switch(e.prev=e.next){case 0:return e.next=2,o.e(491).then(o.bind(o,38491));case 2:return e.abrupt("return",(s=e.sent).default.apply(s,u));case 3:case"end":return e.stop()}},b)}));function p(){return l.apply(this,arguments)}return p}()}}}},97413:function(a,d,o){o.r(d),o.d(d,{demos:function(){return i}});var t=o(75271),n=o(48346),i={}},55294:function(a,d,o){o.r(d),o.d(d,{texts:function(){return n}});var t=o(69740);const n=[]},56324:function(a,d,o){o.r(d),o.d(d,{texts:function(){return n}});var t=o(48346);const n=[{value:"\u57FA\u7840\u7684\u6309\u94AE\u7EC4\u4EF6 Button12\u3002",paraId:0,tocIndex:1},{value:"\u57FA\u7840\u7528\u6CD5",paraId:1,tocIndex:2}]},42035:function(a,d){d.Z=`import React from "react";
 const Ske = () => {
+  console.log('ske345')
   return (
     <div
       dangerouslySetInnerHTML={{
@@ -45,6 +46,7 @@ export default ({ isLoading = true, children }) => {
 };
 `},91896:function(a,d){d.Z=`import React from "react";
 const Ske = () => {
+  console.log('ske234')
   return (
     <div
       dangerouslySetInnerHTML={{
@@ -90,6 +92,7 @@ export default ({ isLoading = true, children }) => {
 };
 `},71606:function(a,d){d.Z=`import React from "react";
 const Ske = () => {
+  console.log('ske123')
   return (
     <div
       dangerouslySetInnerHTML={{
