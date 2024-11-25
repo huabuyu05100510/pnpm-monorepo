@@ -1,6 +1,6 @@
 {
   "name": "pnpm-monorepo",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -24,7 +24,8 @@
     "typescript": "^5.6.3"
   },
   "dependencies": {
-    "dumi": "^2.4.13"
+    "dumi": "^2.4.13",
+    "standard-version": "^9.5.0"
   },
   "workspaces": [
     "packages/*"
