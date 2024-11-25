@@ -10,7 +10,7 @@
     "build:docs": " dumi build",
     "clean": "pnpm -r --filter=./packages/* run clean",
     "changelog": "conventional-changelog -p angular -i CHANGELOG.md -s",
-    "pub": "pnpm run build && pnpm -r --filter=./packages/* publish --force  --no-git-checks --registry=https://registry.npmjs.org",
+    "pub": "pnpm -r --filter=./packages/* run pub",
     "pub:beta": "pnpm run build && npm -r --filter=./packages/* publish --tag beta"
   },
   "author": "",
@@ -18,11 +18,15 @@
   "devDependencies": {
     "@changesets/cli": "^2.27.9",
     "@types/node": "^22.9.0",
+    "lerna": "^6.6.2",
     "prettier-plugin-organize-imports": "^4.1.0",
     "prettier-plugin-packagejson": "^2.5.3",
     "typescript": "^5.6.3"
   },
   "dependencies": {
     "dumi": "^2.4.13"
-  }
+  },
+  "workspaces": [
+    "packages/*"
+  ]
 }

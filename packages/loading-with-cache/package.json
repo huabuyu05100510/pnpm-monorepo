@@ -7,9 +7,12 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx tsc",
-    "publish": "npm run publish --no-git-checks --registry=https://registry.npmjs.org"
+    "build": "npx tsc"
   },
+  "files": [
+    "dist",
+    "lib"
+  ],
   "publishConfig": {
     "access": "public"
   },

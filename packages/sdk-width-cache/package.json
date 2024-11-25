@@ -5,9 +5,12 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx tsc",
-    "publish": "npm run publish --no-git-checks --registry=https://registry.npmjs.org"
+    "build": "npx tsc"
   },
+  "files": [
+    "dist",
+    "lib"
+  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
