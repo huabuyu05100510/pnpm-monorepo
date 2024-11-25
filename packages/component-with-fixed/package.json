@@ -13,8 +13,8 @@
   "main": "./lib/index/index.umd.js",
   "scripts": {
     "dev": "vite",
-    "build": "tsc && vite build",
-    "pub": "pnpm run build && pnpm publish --force --no-git-checks --registry=https://registry.npmjs.org"
+    "build": "tsc && vite build" ,
+    "pub": "pnpm publish --no-git-checks --registry=https://registry.npmjs.org"
   },
   "devDependencies": {
     "typescript": "~5.6.3",

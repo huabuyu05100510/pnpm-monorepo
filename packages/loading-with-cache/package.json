@@ -7,7 +7,9 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "npx tsc"
+    "build": "npx tsc",
+    "pub": "pnpm publish --no-git-checks --registry=https://registry.npmjs.org"
+     
   },
   "files": [
     "dist",
@@ -19,8 +21,5 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "dependencies": {
-    "@smarty-skeleton-test1/component-with-fixed": "workspace:^"
-  },
   "gitHead": "9f79eb822d93c66968689149d6e87140e5919dd0"
 }
