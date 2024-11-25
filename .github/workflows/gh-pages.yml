@@ -32,7 +32,6 @@ jobs:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 
       - name: registry config
-        uses: actions/setup-node@v1
         with:
           registry-url: https://registry.npmjs.org/
       - run: pnpm run pub 
