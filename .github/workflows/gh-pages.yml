@@ -33,3 +33,11 @@ jobs:
           FOLDER: sites
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 
+      - name: Use Node.js 12
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12
+          registry-url: https://registry.npmjs.org/
+      - run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
