@@ -4,18 +4,16 @@
   "type": "module",
   "files": [
     "dist",
-    "index.d.ts"
+    "lib"
   ],
   "publishConfig": {
     "access": "public"
 },
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.esm.js",
-  "types": "./index.d.ts",
-  "exports": {
-    "types": "./index.d.ts",
-    "import": "./dist/counter.js",
-    "require": "./dist/counter.umd.cjs"
+  "main": "./lib/index.umd.cjs",
+  "module": "./lib/index.js",
+  "exports": { 
+    "import": "./lib/index.js",
+    "require": "./lib/index.umd.cjs"
   },
   "scripts": {
     "dev": "vite",

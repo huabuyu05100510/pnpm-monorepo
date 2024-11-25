@@ -1,4 +1,6 @@
-import { defineConfig } from "vite";
+ 
+import { defineConfig  } from "vite";
+import buildLib from './scripts/build'
 
 export default defineConfig({
   build: {
@@ -21,8 +23,8 @@ export default defineConfig({
           exports: "named",
           entryFileNames: "[name].esm.js",
           chunkFileNames: "[name].esm.js",
-          preserveModules: true, // 保留模块结构
-          preserveModulesRoot: "src", // 将保留的模块放在根级别的此路径下
+          // preserveModules: true, // 保留模块结构
+          // preserveModulesRoot: "src", // 将保留的模块放在根级别的此路径下
         },
         {
           format: "cjs",
@@ -30,8 +32,8 @@ export default defineConfig({
           exports: "named",
           entryFileNames: "[name].cjs",
           chunkFileNames: "[name].cjs",
-          preserveModules: true, // 保留模块结构
-          preserveModulesRoot: "src", // 将保留的模块放在根级别的此路径下
+          // preserveModules: true, // 保留模块结构
+          // preserveModulesRoot: "src", // 将保留的模块放在根级别的此路径下
         },
         // {
         //   format: "umd",
@@ -58,3 +60,6 @@ export default defineConfig({
     outDir: "./dist",
   },
 });
+
+buildLib()
+ 
