@@ -34,9 +34,9 @@ jobs:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 
       - name: Use Node.js 12
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v3
         with:
-          node-version: 12
+          node-version: 16.18.0 
           registry-url: https://registry.npmjs.org/
       - run: npm publish --access public
         env:
