@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import reactLogo from './assets/react.svg'
-import Page1Sub1  from '@smarty-skeleton-test1/component-with-fixed/dist/Page1/Page1Sub1.esm.js'
+import {Page1Sub1}  from '@smarty-skeleton-test1/component-with-fixed'
 import viteLogo from '/vite.svg'
 import './App.css'
 

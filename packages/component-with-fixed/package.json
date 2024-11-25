@@ -1,6 +1,6 @@
 {
-  "name": "@smarty-skeleton-test1/component-with-fixed",
-  "version": "0.0.0",
+  "name": "@smarty-skeleton-test/component-with-fixed",
+  "version": "0.0.3",
   "type": "module",
   "files": [
     "dist",
@@ -8,13 +8,9 @@
   ],
   "publishConfig": {
     "access": "public"
-},
-  "main": "./lib/index.umd.cjs",
-  "module": "./lib/index.js",
-  "exports": { 
-    "import": "./lib/index.js",
-    "require": "./lib/index.umd.cjs"
   },
+  "module": "./lib/index/index.js",
+  "main": "./lib/index/index.umd.js",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build"

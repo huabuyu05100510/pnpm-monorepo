@@ -20,6 +20,7 @@ jobs:
           npm i -g pnpm
           pnpm install
           pnpm run build:docs
+          pnpm run build
         env:
           NODE_OPTIONS: '--max_old_space_size=4096'
 
@@ -29,3 +30,11 @@ jobs:
           BRANCH: gh-pages
           FOLDER: sites
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+
+      - name: registry config
+        uses: actions/setup-node@v1
+        with:
+          registry-url: https://registry.npmjs.org/
+      - run: pnpm run pub 
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
