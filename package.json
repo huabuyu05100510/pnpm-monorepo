@@ -10,8 +10,8 @@
     "build:docs": " dumi build",
     "clean": "pnpm -r --filter=./packages/* run clean",
     "changelog": "npx conventional-changelog -p angular -i CHANGELOG.md -s -r 1",
-    "pub": "pnpm -r --filter=./packages/* publish --no-git-checks",
-    "pub:beta": "pnpm run build && pnpm -r --filter=./packages/* publish --tag beta"
+    "pub": "pnpm run build && pnpm -r --filter=./packages/* publish --no-git-checks --registry=https://registry.npmjs.org",
+    "pub:beta": "pnpm run build && npm -r --filter=./packages/* publish --tag beta"
   },
   "author": "",
   "license": "ISC",
