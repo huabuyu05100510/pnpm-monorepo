@@ -1,6 +1,6 @@
 {
   "name": "@smarty-skeleton-test/component-with-fixed",
-  "version": "0.0.25",
+  "version": "0.0.26",
   "type": "module",
   "files": [
     "dist",
@@ -16,7 +16,8 @@
     "build": "tsc && vite build",
     "version-update": "node ./scripts/version.js",
     "release": "standard-version",
-    "pub": "pnpm run version-update && pnpm publish --no-git-checks --registry=https://registry.npmjs.org"
+    "changelog": "npx conventional-changelog-cli -p angular -i CHANGELOG.md -s",
+    "pub": "pnpm run changelog && pnpm run version-update && pnpm publish --no-git-checks --registry=https://registry.npmjs.org"
   },
   "devDependencies": {
     "typescript": "~5.6.3",
@@ -24,6 +25,7 @@
   },
   "dependencies": {
     "@vitejs/plugin-react": "^4.3.3",
+    "conventional-changelog-cli": "^5.0.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "standard-version": "^9.5.0"
