@@ -1,6 +1,6 @@
 {
   "name": "@smarty-skeleton-test/component-with-fixed",
-  "version": "0.0.22",
+  "version": "0.0.23",
   "type": "module",
   "files": [
     "dist",
@@ -15,6 +15,7 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "version-update": "node ./scripts/version.js",
+    "release": "standard-version",
     "pub": "pnpm run version-update && pnpm publish --no-git-checks --registry=https://registry.npmjs.org"
   },
   "devDependencies": {
@@ -24,6 +25,7 @@
   "dependencies": {
     "@vitejs/plugin-react": "^4.3.3",
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^18.3.1",
+    "standard-version": "^9.5.0"
   }
 }
