@@ -39,7 +39,7 @@ export default defineConfig({
       "Copyright © 2024-2024 Smarty Skeleton. All Rights Reserved. Smarty Skeleton 版权所有.",
     nav: [
       {
-        title: "指南333",
+        title: "指南",
         link: "/guide",
       },
       {
